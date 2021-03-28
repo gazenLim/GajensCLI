@@ -12,15 +12,10 @@ RELATIVE_URL = "https://www.barnesandnoble.com/"
         end
     end
 
-
-
     def self.load_books_details(book)
         html = open(RELATIVE_URL+book.url)
         doc = Nokogiri::HTML(html)
-
         book.overview =doc.css('div[itemprop="description"]').text.strip
-        
-       
     end
    
 end

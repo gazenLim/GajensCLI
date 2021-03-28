@@ -1,6 +1,5 @@
 #!usr/bin/env ruby
 
-
 require 'open-uri'
 require 'nokogiri'
 require 'pry'
@@ -8,10 +7,5 @@ require 'pry'
 require_relative '../lib/cli'
 require_relative '../lib/scrap'
 require_relative '../lib/book'
-
-
-
-
-
 
 CLI.new.run
