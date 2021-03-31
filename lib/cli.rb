@@ -7,18 +7,18 @@ class CLI
             list_books
             menu
         end
+  
+       def exit_program
+            puts "Thanks for visit"
+            puts ""
+            exit
+        end
 
         def list_books
             Books.all.each.with_index(1) do |book, i|
             puts "#{i}. #{book.name}"
         end
-
-        def exit_program
-            puts "Thanks for visit"
-            puts ""
-            exit
         end
-    end
 
     def menu
         puts " "
@@ -55,7 +55,6 @@ class CLI
 
     
     def display_again
-        
         puts "  "
         puts "      would you like to see more[Y/N]"
         puts " --(Y) for list of books and (N) for exit--"

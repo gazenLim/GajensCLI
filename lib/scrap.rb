@@ -5,8 +5,8 @@ RELATIVE_URL = "https://www.barnesandnoble.com/"
     def self.load_scraper
         html = open('https://www.barnesandnoble.com/b/books/_/N-1fZ29Z8q8')
         doc = Nokogiri::HTML(html)
-        doc.css('.product-info-title').each do |books|
-          name= books.css('a').text
+        doc.css('.product-info-title').map do |books|
+          name= books.css('a').text.upcase
           url = books.css('a').attr('href').value
           Books.new(name, url)
         end

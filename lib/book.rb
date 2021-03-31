@@ -1,8 +1,7 @@
 class Books
 
     attr_accessor :name, :url, :overview
-    @@all=[]
-    
+  @@all=[]
     def initialize(name, url)
         @name = name
         @url = url
@@ -12,6 +11,9 @@ class Books
 
     def self.all
         @@all
+ 
     end
+
+    
 
 end
